@@ -437,3 +437,6 @@ def remove_after_return(code):
             return code[0: start_match]
         end_last_match = end_match
     return code
+
+def get_data(item, task_name):
+    pass
