@@ -276,7 +276,8 @@ def main():
                 "category" : f"codegen_{task_name}",
                 "prompt_instruction" : prompt,
                 "request_type" : "generate_until",
-                
+                "gold" : {k:v for k, v in dataset[index].items() if k not in excluded_keys},
+                "id" : f"{task_name}_{index:08d}",
             }
     
     for idx, task in enumerate(task_names):
